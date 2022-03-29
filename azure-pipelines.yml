@@ -40,9 +40,3 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
-- task: CopyFiles@1
-  inputs:
-    SourceFolder: '$(Pipeline.Workspace)/s/target/'
-    Contents: '*.war'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
-    CleanTargetFolder: true
