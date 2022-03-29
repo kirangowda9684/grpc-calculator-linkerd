@@ -32,9 +32,10 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
 - task: Ant@1
   inputs:
-    buildFile: 'build.xml'
+    buildFile: 'MathFanboy.csproj'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
