@@ -33,12 +33,6 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-
-- task: Ant@1
-  inputs:
-    buildFile: 'MathFanboy.csproj'
-    publishJUnitResults: true
-    testResultsFiles: '**/TEST-*.xml'
 - task: CopyFiles@1
   inputs:
     SourceFolder: '$(Pipeline.Workspace)/kiran/'
