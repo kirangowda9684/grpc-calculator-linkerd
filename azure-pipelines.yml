@@ -37,9 +37,6 @@ steps:
 - task: Ant@1
   inputs:
     buildFile: 'MathFanboy.csproj'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
 - task: CopyFiles@1
