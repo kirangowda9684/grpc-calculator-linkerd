@@ -51,23 +51,3 @@ steps:
     repository: 'kirangowda9684 / firstrepo'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-
-- task: Docker@1      
-  inputs:
-        containerregistrytype: 'Container Registry'
-        dockerRegistryEndpoint: 'Docker Hub'
-        command: 'Build an image'
-        dockerFile: C:\Users\kiran_k\Desktop\DockerFiles
-        imageName: '$myfirstimage'
-        useDefaultContext: false
-        buildContext: 'CustomerApi'
-  displayName: 'Build the Docker image'
-
-- task: Docker@1      
-  inputs:
-        containerregistrytype: 'Container Registry'
-        dockerRegistryEndpoint: 'Docker Hub'
-        command: 'Push an image'
-        imageName: '$myfirstimage'
-  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
-  displayName: 'Push the Docker image to Dockerhub'
