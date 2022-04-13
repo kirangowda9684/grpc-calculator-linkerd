@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'bitnami/aspnet-core'
+  vmImage: 'windows-latest'
 
 variables:
   solution: '**/*.sln'
